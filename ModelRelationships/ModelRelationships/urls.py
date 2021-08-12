@@ -19,5 +19,7 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('CollegeApp.urls'))
+    path('dept/',include('CollegeApp.urls')),
+    path('prof/',include('ProfApp.urls')),
+    path('stud/',include('StudentApp.urls')),
 ]

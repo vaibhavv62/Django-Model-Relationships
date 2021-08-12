@@ -5,13 +5,6 @@ class Dept(models.Model):
     name = models.CharField(max_length=32)
     intake = models.IntegerField()
 
-class Prof(models.Model):
-    dept = models.ManyToManyField(Dept)
-    name = models.CharField(max_length=32)
-    salary = models.FloatField()
+    def __str__(self) -> str:
+        return f"{self.name}"
 
-class Student(models.Model):
-    dept = models.OneToOneField(Dept,on_delete=models.CASCADE)
-    rn = models.IntegerField(unique=True)
-    name = models.CharField(max_length=32)
-    marks = models.FloatField()

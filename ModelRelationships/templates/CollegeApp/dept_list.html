@@ -1,4 +1,4 @@
-{% extends 'CollegeApp/layout.html' %}
+{% extends 'layout.html' %}
 
 {% block title %}
     <title>Show Depts</title>
@@ -22,13 +22,13 @@
                         <td>{{dept.id}}</td>
                         <td>{{dept.name}}</td>
                         <td>{{dept.intake}}</td>
-                        <td><a href="{% url 'update' dept.id %}"><button class="btn btn-warning">Update</button></a></td>
-                        <td><a href="{% url 'delete' dept.id %}"><button class="btn btn-danger">Delete</button></a></td>
+                        <td><a href="{% url 'update_dept' dept.id %}"><button class="btn btn-warning">Update</button></a></td>
+                        <td><a href="{% url 'delete_dept' dept.id %}"><button class="btn btn-danger">Delete</button></a></td>
                     </tr>
                 {% endfor %}
             </table>
             <br>
-            <a href="{% url 'create' %}">
+            <a href="{% url 'create_dept' %}">
                 <button class="btn btn-primary">
                     Add Dept
                 </button>
@@ -36,7 +36,7 @@
         {% else %}
             <h5>No records found, Please add few by hitting following button!</h5>
             <br>
-            <a href="{% url 'create' %}">
+            <a href="{% url 'create_dept' %}">
                 <button class="btn btn-primary">
                     Add Dept
                 </button>

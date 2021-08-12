@@ -9,7 +9,7 @@ from django.urls import reverse_lazy
 class DeptCreateView(CreateView):
     model = Dept
     fields = '__all__'
-    success_url = reverse_lazy('retrive')
+    success_url = reverse_lazy('retrive_dept')
 
 class DeptListView(ListView):
     model = Dept
@@ -17,10 +17,10 @@ class DeptListView(ListView):
 class DeptUpdateView(UpdateView):
     model = Dept
     fields = '__all__'
-    success_url = reverse_lazy('retrive')
+    success_url = reverse_lazy('retrive_dept')
 
 class DeptDeleteView(DeleteView):
     model = Dept
-    success_url = reverse_lazy('retrive')
+    success_url = reverse_lazy('retrive_dept')
 
 

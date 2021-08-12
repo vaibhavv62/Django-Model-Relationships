@@ -1,12 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
     <head>
         {% block title %}
-            <title>Show Students</title>
+            <title>Give Title</title>
         {% endblock %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
     </head>
-    <body style="margin-top: 3%;">
+    <body>
+        <ul class="my_navbar">
+            <li><a href="{% url 'retrive_dept' %}">Departments</a></li>
+            <li><a href="{% url 'retrive_prof' %}">Professors</a></li>
+            <li><a href="{% url 'retrive_stud' %}">Students</a></li>
+            <span style="float: right; margin-top: 1%;">
+                {% block search %}
+                    
+                {% endblock %}
+            </span>
+        </ul>
+        <br><br><br>
         {% block content %}
             <p>Page specific code goes here</p>
         {% endblock %}
