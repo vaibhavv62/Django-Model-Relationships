@@ -23,4 +23,16 @@ class DeptDeleteView(DeleteView):
     model = Dept
     success_url = reverse_lazy('retrive_dept')
 
+def deptSearchView(request):
+    n = request.GET.get('dept_name')
+    print(f"Searching {n}")
+    # depts = Dept.objects.filter(name__contains=n)
+    dept = Dept.objects.filter(name__contains=n).first()
+    profs = dept.prof_set.all()
+    studs = dept.student_set.all()
+    print(f"studs-{studs}")
+    template_name = "CollegeApp/dept_search_list.html"
+    context = {'dept':dept,'dept_name':n,'profs_list':profs,'studs_list':studs}
+    return render(request,template_name,context)
+
 

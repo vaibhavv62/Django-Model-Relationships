@@ -7,7 +7,18 @@
 {% block content %}
     <div class="container jumbotron">
         <h1 style="text-align: center;">Model Relationships</h1>
-        <br><br>
+        <ul style="text-align: center;">
+            <button class="btn btn-link"><a href="https://github.com/vaibhavv62/Django-Model-Relationships">Contribute</a></button>
+        </ul>
+        <hr>
+        <ul>
+            <li>This project illustrates the usage of CRUD, Relationships & Search Functionality using Django WebFramework in Python.</li>
+            <li>Main objective of this project is to learn & implement Model RelationShips in Django.</li>
+            <li>According to the requirements of project, I've used Many to Many and One to Many relationships.</li>
+            <li>There is M2M relationship between Department & Professors, while Students & Department have One to Many reln.</li>
+        </ul>
+        <br><br><br><br>
+        <hr>
         <div style="text-align: center;">
             <a href="{% url 'retrive_dept' %}" >
                 <input type="button" value="Go to All Departments" class="btn btn-primary">
