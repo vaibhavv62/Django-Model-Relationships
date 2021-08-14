@@ -23,6 +23,7 @@
                     <th>Professor ID</th>
                     <th>Professor Name</th>
                     <th>Professor Salary</th>
+                    <th>Department/s</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </tr>
@@ -31,6 +32,7 @@
                         <td>{{prof.id}}</td>
                         <td>{{prof.name}}</td>
                         <td>{{prof.salary}} LPA</td>
+                        <td>{{prof.get_dept_values}}</td>
                         <td><a href="{% url 'update_prof' prof.id %}"><button class="btn btn-warning">Update</button></a></td>
                         <td><a href="{% url 'delete_prof' prof.id %}"><button class="btn btn-danger">Delete</button></a></td>
                     </tr>

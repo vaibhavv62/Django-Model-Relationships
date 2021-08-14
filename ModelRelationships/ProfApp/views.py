@@ -14,6 +14,7 @@ class ProfCreateView(CreateView):
 class ProfListView(ListView):
     model = Prof
 
+
 class ProfUpdateView(UpdateView):
     model = Prof
     fields = '__all__'
