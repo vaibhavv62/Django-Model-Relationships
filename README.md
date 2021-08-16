@@ -1,5 +1,4 @@
 # Django-Model-Relationships
-## MicroPyramidTask4
   
 - This project illustrates the usage of CRUD, Relationships & Search Functionality using Django WebFramework in Python.
 - Main objective of this project is to learn & implement Model RelationShips in Django.
