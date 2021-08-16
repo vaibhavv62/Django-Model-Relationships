@@ -1,5 +1,4 @@
 # Django-Model-Relationships
-## MicroPyramidTask4
   
 - This project illustrates the usage of CRUD, Relationships & Search Functionality using Django WebFramework in Python.
 - Main objective of this project is to learn & implement Model RelationShips in Django.
@@ -14,6 +13,9 @@
 
 ## Executing the project:
 0. Pull/Clone the project.
+  ```
+  git clone https://github.com/vaibhavv62/Django-Model-Relationships.git
+  ```
 1. Create & Activate Virtual Enviornment(Optional but reccommonded)
   ```
   virtualenv venv
