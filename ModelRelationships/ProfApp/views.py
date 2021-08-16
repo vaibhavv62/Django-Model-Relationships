@@ -4,11 +4,13 @@ from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from django.views.generic.list import ListView
 from .models import Prof
 from django.urls import reverse_lazy
+from .forms import ProfModelForm
 
 # Create your views here.
 class ProfCreateView(CreateView):
     model = Prof
-    fields = '__all__'
+    form_class = ProfModelForm
+    # fields = '__all__'
     success_url = reverse_lazy('retrive_prof')
 
 class ProfListView(ListView):
@@ -17,7 +19,8 @@ class ProfListView(ListView):
 
 class ProfUpdateView(UpdateView):
     model = Prof
-    fields = '__all__'
+    form_class = ProfModelForm
+    # fields = '__all__'
     success_url = reverse_lazy('retrive_prof')
 
 class ProfDeleteView(DeleteView):
